@@ -100,20 +100,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5O7-pb-sJZ" id="BzE-0R-Aat">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="dh9-2i-uKs">
-                                                    <rect key="frame" x="8" y="11" width="584" height="80"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="fgY-Fo-uQP"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-vX-E1f">
+                                                    <rect key="frame" x="8" y="8" width="584" height="64"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dh9-2i-uKs" firstAttribute="trailing" secondItem="BzE-0R-Aat" secondAttribute="trailingMargin" id="EPC-qO-zNM"/>
-                                                <constraint firstItem="dh9-2i-uKs" firstAttribute="leading" secondItem="BzE-0R-Aat" secondAttribute="leadingMargin" id="qWh-bS-X6V"/>
-                                                <constraint firstAttribute="centerY" secondItem="dh9-2i-uKs" secondAttribute="centerY" constant="0.5" id="sR3-UG-ADc"/>
+                                                <constraint firstItem="DYj-vX-E1f" firstAttribute="trailing" secondItem="BzE-0R-Aat" secondAttribute="trailingMargin" id="DOS-bu-AbL"/>
+                                                <constraint firstItem="DYj-vX-E1f" firstAttribute="leading" secondItem="BzE-0R-Aat" secondAttribute="leadingMargin" id="WaV-p4-Oj6"/>
+                                                <constraint firstItem="DYj-vX-E1f" firstAttribute="bottom" secondItem="BzE-0R-Aat" secondAttribute="bottomMargin" id="cWz-JB-jJL"/>
+                                                <constraint firstItem="DYj-vX-E1f" firstAttribute="top" secondItem="BzE-0R-Aat" secondAttribute="topMargin" id="dJ9-Vt-Tv0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -127,7 +126,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="q6S-Mb-Y9c"/>
                     <connections>
-                        <outlet property="errorMessageLabel" destination="dh9-2i-uKs" id="8nZ-qS-nbZ"/>
+                        <outlet property="errorMessageTextView" destination="DYj-vX-E1f" id="ZYT-LH-ddA"/>
                         <outlet property="loginButton" destination="ssz-wV-gos" id="MNN-5K-osL"/>
                         <outlet property="passwordTextField" destination="jaT-6M-O7P" id="jMv-VB-3wd"/>
                         <outlet property="usernameTextField" destination="A4c-BC-c0O" id="84x-jL-AHE"/>

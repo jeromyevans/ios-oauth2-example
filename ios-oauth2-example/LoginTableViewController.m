@@ -17,8 +17,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 
-@property (strong, nonatomic) IBOutlet UILabel *errorMessageLabel;
-
+@property (strong, nonatomic) IBOutlet UITextView *errorMessageTextView;
 
 @end
 
@@ -59,7 +58,7 @@
       
         NSLog(@"oauth error reported.");
         dispatch_async(dispatch_get_main_queue(), ^{
-          [self.errorMessageLabel setText:[NSString stringWithFormat:@"Login failed: %@", [error localizedDescription]]];
+          [self.errorMessageTextView setText:[NSString stringWithFormat:@"Login failed: %@", [error localizedDescription]]];
         });
         
      
